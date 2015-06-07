@@ -1,0 +1,30 @@
+<ion-view view-title="Lista">
+    
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="right">
+        <a class="button button-clear button-positive" href="#/tab/add-lista" >
+          Add Lista
+        </a>
+      </ion-nav-buttons>
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/productos/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <a class="button button-clear button-positive" href="#/tab/edit-lista/{{chat.id}}" >
+          Editar Lista
+        </a>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

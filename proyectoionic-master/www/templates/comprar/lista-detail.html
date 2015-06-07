@@ -1,0 +1,70 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-view view-title="Lista : {{chat.name}}" >
+
+
+
+
+
+<ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="right">
+        <a class="button button-clear button-positive" href="#/tab/add-producto" >
+           <i class="ion-plus-circled"></i>
+          Add Producto
+        </a>
+     
+       
+              <button class="button button-icon ion-plus" ng-click="uploadItem()"></button>
+      
+      </ion-nav-buttons>
+
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+</ion-nav-bar>
+
+
+  <ion-content class="padding" >
+  <table>
+<tr>
+  <td>
+  <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+  </td>
+  <td>
+    De la lista  {{chat.lastText}} 
+  </td>
+</tr>
+
+  </table>  
+  
+
+ <div class="list">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="searchQuery" placeholder="Search Products">
+        </label>
+        <button class="button button-small">
+          Search
+        </button>
+      </div>
+
+  </div>
+
+
+<ion-list >
+<ion-item ng-repeat="item in items"  >
+ {{item.name}}hola
+<ion-option-button class="button-royal" ng-click="purchaseItem(item)">
+<i class="icon ion-checjmark"></i>
+</ion-item>
+</ion-list>
+
+   
+  </ion-content>
+</ion-view>
+

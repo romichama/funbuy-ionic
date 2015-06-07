@@ -1,0 +1,45 @@
+<ion-view view-title="Add Producto">
+  <ion-content>
+    <ion-list>
+
+        <div class="list list-inset">
+        	<label class="item item-input">
+            <span class="input-label">Nombre</spam>
+               <input type="text" placeholder=" Producto" ng-model="items.nombre">
+        	</label>
+            <label class="item item-input">
+
+               <span class="input-label">Caracteristicas</spam> 
+               <input type="text" placeholder="como es lo que busca" ng-model="items.caracteristica">
+        	</label>
+
+            <label class="item item-input">
+
+            <span class="input-label">Categoria</spam>
+               <input type="text" placeholder="ej: ropa , maquinas, etc" ng-model="items.categoria">
+        	</label>
+
+          <label class="item item-input">
+
+            <span class="input-label">Calidad o Marca</spam>
+               <input type="text" placeholder="ej: adidas, nike" ng-model="items.calidad">
+          </label>
+
+            <label class="item item-input">
+
+            <span class="input-label">Habito</spam>
+               <input type="text" placeholder="cuando lo compraria" ng-model="items.habito">
+          </label>
+
+             <label class="item item-input">
+
+            <span class="input-label">Precio</spam>
+               <input type="text" placeholder="estimacion de intencion de pagar" ng-model="items.precio">
+          </label>
+         <button class="button button-block button-positive" ng-click="uploadItem()">Guardar Producto</button>
+    
+
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
